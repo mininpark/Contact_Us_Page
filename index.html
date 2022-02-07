@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <title>Contact Us</title>
+
+  <!--main.css has to load after boodstrap for changing css stylesheet-->
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+  <section class="contact">
+    <h1 class="contact_us">Contact Us</h1>
+    <form class="help" action="/userinfo" method="GET">    
+      <h2>How can we help you?</h2>
+      <!--label for and input id have to be same to each other-->
+      <label for="username">Your Name</label>
+      <input type="text" class="detail" id="username" name="username" required>
+  
+      <label for="useremail">Your Email</label>
+      <input type="email" class="detail" id="useremail" name="useremail" required>
+  
+      <label for="usernumber">Your Phone Number</label>
+      <input type="number" class="detail" id="usernumber" name="usernumber" required minlength="5">
+  
+      <label for="userbirth">Your birthdate</label>
+      <input type="date" class="detail" id="userbirth" name="userbirth" required>
+  
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" required minlength="10" maxlength="200"></textarea>
+  
+      <label for="channel">How did you find us?</label>
+      <select name="channel" id="channel" required>
+        <option value="search">Web Search</option>
+        <option value="word-of-mouth">Friends, Familiy</option>
+        <option value="other">Other</option>
+      </select>
+
+
+  
+      <h2>How should we reply?</h2>
+      <ul>
+        <li>
+          <input type="radio" id="sms" name="reply-method" value="sms"/>
+          <label for="sms">SMS</label> 
+        </li>
+        <li>
+          <input type="radio" id="call" name="reply-method" value="call"/>
+          <label for="call">Call me</label> 
+        </li>
+        <li>
+          <input type="radio" id="noreply" name="reply-method" value="noreply"/>
+          <label for="noreply">Please don't reply</label> 
+        </li>
+      </ul>
+
+      <hr/>
+      <div class="terms-box">      
+        <input type="checkbox" name="" id=""/>
+        <label for="" aria-required="true">Accept Terms</label>
+      </div>
+
+      <div class="btn-box">
+        <input type="reset" value="Clear"/>
+        <input type="submit" value="Submit"/>
+      </div>
+    </form>
+  </section>
+
+</body>
